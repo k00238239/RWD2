@@ -5,30 +5,45 @@
 
 
 <link rel ="stylesheet" type="text/css" href="k00238239.css" />
+    <script type="text/javascript">
+        function checkforblank()
+        {
+            if(document.getElementById
+               ('uname').value == ""){
+                alert('please enter your name');
+                document.getElementById('uname').style.borderColor ="red";
+                return false;
+                
+            }
+            
+        }
+    </script>
 </head>
 <body id= "login">
 <article>
 <h1>login</h1>
-<form action="action_page.php" method="post">
+<form  method="post" action="#" onsubmit="return checkforblank()" >
+    <fieldset>
   
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label >Username:
+        <input type="text" id="uname" name="uname"></label>
+        <br>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label >Password
+    <input type="password" id="uname"placeholder="Enter Password" name="uname"> </label>
 
-  <a href="k00238239MainPage.html"  <button type="submit">Login</button> </a>
+  <a href="index.html"  button type="submit">Login </a>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
+  
 
   <div class="container" style="background-color:#f1f1f1">
-    <a href="k00238239MainPage.html"<button type="button" class="cancelbtn">Cancel</button></a>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <a href="index.html"button type="button" class="cancelbtn">Cancel</a>
+    <span class="uname">Forgot <a href="#">password?</a></span>
   </div>
+</fieldset>
 </form>
 </article>
 </body>
